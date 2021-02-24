@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import HomeScreen from './screens/HomeScreen'
 import { Container } from "react-bootstrap";
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
             <Header />
             <Container>
                 <main className="py-3">
-                    <h1>Welcomes to the app</h1>
+                    <HomeScreen/>
                 </main>
             </Container>
             <Footer />
