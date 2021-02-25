@@ -3,15 +3,15 @@ import { Card, CardImg } from "react-bootstrap";
 
 const Product = ({ product }) => {
     return (
-        <Card className="my-3 p-3 rounded">
+        <Card className="my-2 p-1 rounded">
             <a href={`/product/${product.id}`}>
-                <CardImg src={`https://robohash.org/${product.id}`} variant="top" />
+                <CardImg src={`https://robohash.org/${product.id}?size=200x200`} variant="top" />
             </a>
 
             <Card.Body>
                 <a href={`/product/${product.id}`}>
                     <Card.Title as="div">
-                        <strong>{product.title}</strong>
+                        <h1 className="product-title">{product.title}</h1>
                     </Card.Title>
                 </a>
 
