@@ -2,7 +2,7 @@ const products = [
     {
         userId: 1,
         id: 1,
-        rating: 4,
+        rating: 4.5,
         numReviews: 54,
         price: 1250,
         title: "sunt aut facere",
@@ -41,7 +41,7 @@ const products = [
     {
         userId: 1,
         id: 5,
-        rating: 4,
+        rating: 3.6,
         numReviews: 22,
         price: 150,
         title: "nesciunt quas odio",
@@ -50,7 +50,7 @@ const products = [
     {
         userId: 1,
         id: 6,
-        rating: 4,
+        rating: 3,
         numReviews: 12,
         price: 150,
         title: "dolorem eum magni",
@@ -60,7 +60,7 @@ const products = [
     {
         userId: 1,
         id: 7,
-        rating: 4,
+        rating: 3.4,
         numReviews: 24,
         price: 1520,
         title: "magnam facilis autem",
@@ -69,7 +69,7 @@ const products = [
     {
         userId: 1,
         id: 8,
-        rating: 4,
+        rating: 4.7,
         price: 550,
         numReviews: 85,
         title: "dolorem dolore",
@@ -79,7 +79,7 @@ const products = [
     {
         userId: 1,
         id: 9,
-        rating: 4,
+        rating: 2,
         numReviews: 623,
         price: 190,
         title: "nesciunt iure omnis",
@@ -88,7 +88,7 @@ const products = [
     {
         userId: 1,
         id: 10,
-        rating: 4,
+        rating: 5,
         numReviews: 190,
         price: 2000,
         title: "optio molestias",
