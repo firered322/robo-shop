@@ -1,5 +1,20 @@
+#root {
+    background: hsla(213, 89%, 71%, 1);
+
+    background: linear-gradient(270deg, hsla(213, 89%, 71%, 1) 1%, hsla(257, 69%, 60%, 1) 95%);
+
+    background: -moz-linear-gradient(270deg, hsla(213, 89%, 71%, 1) 1%, hsla(257, 69%, 60%, 1) 95%);
+
+    background: -webkit-linear-gradient(270deg, hsla(213, 89%, 71%, 1) 1%, hsla(257, 69%, 60%, 1) 95%);
+}
+
 main {
     min-height: 80vh;
+}
+
+.nav-color {
+    background-color: #ec5151;
+    color: #f1faee;
 }
 
 .product-title {
@@ -18,4 +33,15 @@ main {
 
 h4 {
     padding: 0.5rem 0;
+}
+
+.prodScreenInfo {
+    display: flex;
+    align-items: center;
+}
+
+.priceCartHolder {
+    border: 1px solid black;
+    margin: 0 0 10px 0;
+    padding: 5px;
 }

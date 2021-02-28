@@ -5,10 +5,12 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 const Header = () => {
     return (
         <header>
-            <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+            <Navbar className="nav-color" expand="lg" collapseOnSelect>
                 <Container>
                     <LinkContainer to="/">
-                        <Navbar.Brand>Shoppie</Navbar.Brand>
+                        <Navbar.Brand>
+                            <span style={{ color: "#f1faee" }}>Shopzie</span>
+                        </Navbar.Brand>
                     </LinkContainer>
 
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -16,12 +18,16 @@ const Header = () => {
                         <Nav className="ml-auto">
                             <LinkContainer to="/cart">
                                 <Nav.Link>
-                                    <i className="fas fa-shopping-cart"></i> Home
+                                    <span style={{ color: "#f1faee" }}>
+                                        <i className="fas fa-shopping-cart"></i> Home
+                                    </span>
                                 </Nav.Link>
                             </LinkContainer>
                             <LinkContainer to="/login">
                                 <Nav.Link>
-                                    <i className="fas fa-user"></i> Log In
+                                    <span style={{ color: "#f1faee" }}>
+                                        <i className="fas fa-user"></i> Log In
+                                    </span>
                                 </Nav.Link>
                             </LinkContainer>
                         </Nav>

@@ -5,7 +5,7 @@ import { Row, Col } from "react-bootstrap";
 const HomeScreen = () => {
     return (
         <div>
-            <h1>Latest products</h1>
+            <h2 style={{ color: "#f1faee" }}>Discover weird Robots</h2>
             <Row>
                 {products.map((prod) => (
                     <Col sm={12} md={6} lg={4} xl={3} key={prod.id}>

@@ -6,7 +6,7 @@ const Product = ({ product }) => {
     return (
         <Card className="my-2 p-1 rounded">
             <Link to={`/product/${product.id}`}>
-                <CardImg src={`https://robohash.org/${product.id}?size=200x200`} variant="top" />
+                <CardImg src={`https://robohash.org/${product.id}?size=220x220`} variant="top" />
             </Link>
 
             <Card.Body>
