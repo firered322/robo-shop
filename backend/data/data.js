@@ -1,4 +1,4 @@
-const products = [
+exports.products = [
     {
         userId: 1,
         id: 1,
@@ -105,5 +105,3 @@ const products = [
         body: "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error",
     },
 ];
-
-export default products;
