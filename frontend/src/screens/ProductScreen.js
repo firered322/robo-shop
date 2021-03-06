@@ -9,10 +9,10 @@ const ProductScreen = (props) => {
     useEffect(() => {
         const fetchProduct = async () => {
             const response = await axios.get(`/api/products/${props.match.params.id}`);
-            setProduct(response.data);
+            setProduct(response.data[0]);
         };
         fetchProduct();
-    }, []);
+    }, [props.match]);
     //* we now will get the single product from the data file
     return (
         <>
@@ -21,19 +21,19 @@ const ProductScreen = (props) => {
             </Link>
             <Row>
                 <Col md={4} className="text-center">
-                    <Image src={`https://robohash.org/${product.id}?size=220x220`} alt={product.title} fluid />
+                    <Image src={`https://robohash.org/${product._id}?size=220x220`} alt={product.name} fluid />
                 </Col>
                 <Col md={4} className="prodScreenInfo">
                     <ListGroup variant="flush" style={{ border: "1px solid black", width: "100%" }}>
                         <div className="px-2 py-2" style={{ borderBottom: "1px solid black" }}>
-                            <h4>{product.title}</h4>
+                            <h4>{product.name}</h4>
                         </div>
                         <div className="px-2 py-2" style={{ borderBottom: "1px solid black" }}>
-                            <Rating value={product.rating} text={product.numReviews}></Rating>
+                            <Rating value={product.rating} text={product.totalReviews}></Rating>
                         </div>
                         <div className="px-2 py-2">
                             <strong>Description: </strong>
-                            <p>{product.body}</p>
+                            <p>{product.description}</p>
                         </div>
                     </ListGroup>
                 </Col>
@@ -49,13 +49,13 @@ const ProductScreen = (props) => {
                             <Row>
                                 <Col>Status:</Col>
                                 <Col>
-                                    {product.countInStock > 0 ? <span style={{ color: "#00ff00" }}>"In stock"</span> : <span style={{ color: "#ff0000" }}>"Out of stock"</span>}
+                                    {product.stockCount > 0 ? <span style={{ color: "#00ff00" }}>"In stock"</span> : <span style={{ color: "#ff0000" }}>"Out of stock"</span>}
                                 </Col>
                             </Row>
                         </div>
                         <div>
                             <div className="text-center">
-                                <button disabled={product.countInStock === 0} className="btn" style={{ backgroundColor: "black", color: "#f1faee", width: "50%" }}>
+                                <button disabled={product.stockCount === 0} className="btn" style={{ backgroundColor: "black", color: "#f1faee", width: "50%" }}>
                                     Add to Cart
                                 </button>
                             </div>
